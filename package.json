@@ -4,7 +4,7 @@
   "description": "simple discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Heatbball21/DiscordBot#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
   }
 }
