@@ -1,0 +1,22 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "simple discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heatbball21/DiscordBot.git"
+  },
+  "author": "Jackson Joblinske",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Heatbball21/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/Heatbball21/DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
