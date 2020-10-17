@@ -1,3 +1,12 @@
+
+/*TODO
+  -add command for adding admins and blacklists
+	-add command for removing admins and blacklists
+	-add toggleable command for auto skipping songs from given user
+	-add command that changes someones nickname
+*/
+
+
 const Discord = require('discord.js');
 const Kick = require("./kick.js");
 require('dotenv').config();
@@ -6,6 +15,9 @@ const guild = new Discord.Guild();
 const guildID = "766521258178510889";
 const channelID = "766521258178510893";
 const BOT = "Angela Mueller";
+const admins = process.env.ADMIN.split(" ");
+const blacklist = process.env.BLACKLIST.split(" ");
+
 
 
 
@@ -20,16 +32,16 @@ client.on("message", async (msg) => {
 			const args = msg.content.split(" ");
 			const command = args.shift().substr(1);
 
-			console.log(msg);
+			//console.log(msg);
 
 			console.log("command: " + command);
 
 			if(command === "kick"){
-				Kick.kick(msg, args, client);
+				Kick.kick(msg, args, client, admins, blacklist);
 		}
 
-
-    await msg.channel.send("Stop talking!");
+	}
+    //await msg.channel.send("Stop talking!");
 
 //log some useful data
     console.log("Guild: " + msg.guild.name);
@@ -40,7 +52,7 @@ client.on("message", async (msg) => {
 
 
 
-  }
+
 }
 });
 
