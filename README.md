@@ -5,7 +5,7 @@ simple discord bot
 
 Functions:
 
-1. 
+1. Kick
 2. 
 3. 
 4. 
